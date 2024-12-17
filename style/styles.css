@@ -234,7 +234,7 @@ a {
 /* Chefs section */
 
 .chefs-title {
-  max-width: 520px;
+  position: relative;
   margin: 0 auto 80px;
 }
 
@@ -247,15 +247,25 @@ a {
 .chefs-title::before,
 .chefs-title::after {
   content: "";
+  position: absolute;
   display: block;
   width: 352px;
+  bottom: 24px;
   border: 2px solid var(--color-secondary-light);
+}
+
+.chefs-title::before {
+  left: 0;
+}
+
+.chefs-title::after {
+  right: 0;
 }
 
 .chefs-list {
   display: flex;
-  gap: 40px 30px;
   flex-wrap: wrap;
+  gap: 40px 30px;
 }
 
 .chefs-item {
@@ -368,12 +378,35 @@ a {
 
 /* Footer */
 .footer {
+  position: relative;
   background-color: #312614;
   background-image: url("../images/bacgraund-footer.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   padding: 35px 0;
+}
+
+.footer::before,
+.footer::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  background-repeat: no-repeat;
+}
+
+.footer::before {
+  width: 180px;
+  height: 120px;
+  left: 0;
+  background-image: url(./../images/decor-bred-smal.png);
+}
+
+.footer::after {
+  width: 378px;
+  height: 187px;
+  right: 0;
+  background-image: url(./../images/decor-bred-large.png);
 }
 
 .footer-container {
@@ -420,4 +453,38 @@ a {
 .address-copyright {
   color: #a18268;
   font-size: 14px;
+}
+
+/*Modal*/
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0, 0.5);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: relative;
+  width: 880px;
+  height: 880px;
+  background-color: var(--color-primary-light);
+  border-radius: 32px;
+}
+
+.modal-btn-close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
 }
