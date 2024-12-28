@@ -400,6 +400,10 @@ a {
   margin-bottom: 16px;
 }
 
+.contact-form-tetx {
+  color: var(--color-primary-brand-dark);
+}
+
 /* Footer */
 .footer {
   position: relative;

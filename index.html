@@ -193,7 +193,9 @@
               <h2 class="contact-title section-title">
                 Приєднуйся до мережі пекарень
               </h2>
-              <p>Заповни форму, щоб ми звʼязались з тобою!</p>
+              <p class="contact-form-tetx">
+                Заповни форму, щоб ми звʼязались з тобою!
+              </p>
               <form name="contact-form" autocomplete="off" novalidate>
                 <div class="form-fild">
                   <label class="form-lable visually-hiden" for="user-name">
@@ -205,6 +207,9 @@
                     name="user-name"
                     placeholder="Ім’я"
                     id="user-name"
+                    minlength="2"
+                    maxlength="20"
+                    required
                   />
                 </div>
                 <div class="form-fild">
@@ -217,6 +222,8 @@
                     name="user-tel"
                     placeholder="Телефон"
                     id="user-tel"
+                    pattern="^\+[0-9]{12}"
+                    required
                   />
                 </div>
                 <div class="form-fild">
@@ -229,6 +236,7 @@
                     name="user-email"
                     placeholder="Електронна пошта"
                     id="user-email"
+                    required
                   />
                 </div>
                 <button class="button form-button" type="submit">
@@ -324,7 +332,9 @@
       <div class="modal">
         <button class="modal-btn-close" type="button">Close</button>
         <h2>Замовити дзвінок</h2>
-        <p>Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
+        <p class="contact-form-tetx">
+          Залишіть заявку та наш спеціаліст зв'яжеться з Вами!
+        </p>
         <form name="modal-form" autocomplete="off" novalidate>
           <div class="form-fild">
             <label class="form-lable visually-hiden" for="user-name">
@@ -336,6 +346,9 @@
               name="user-name"
               placeholder="Ім’я"
               id="user-name"
+              minlength="2"
+              maxlength="20"
+              required
             />
           </div>
           <div class="form-fild">
@@ -348,6 +361,8 @@
               name="user-tel"
               placeholder="Телефон"
               id="user-tel"
+              pattern="^\+[0-9]{12}"
+              required
             />
           </div>
           <div class="form-fild">
@@ -360,6 +375,7 @@
               name="user-email"
               placeholder="Електронна пошта"
               id="user-email"
+              required
             />
           </div>
           <button class="button form-button" type="submit">
